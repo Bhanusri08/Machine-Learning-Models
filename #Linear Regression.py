@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 import sklearn
+import seaborn as sns
 from sklearn.datasets import load_iris
 iris=load_iris()
 x=iris.data
@@ -28,3 +29,4 @@ plt.ylabel('Target Variable')
 plt.title('Linear Regression - Actual vs. Predicted Values')
 plt.legend()
 plt.show() 
+sns.regplot(x=y_test,y=y_pred)
